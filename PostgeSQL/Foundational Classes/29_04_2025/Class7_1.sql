@@ -68,7 +68,7 @@ ON e.department_id = d.department_id;
 
 -- CROSS JOIN
 SELECT
-name AS employee_name,dxesw3
+name AS employee_name,
 d.department_name
 FROM employees e
 CROSS JOIN departments d;
@@ -80,3 +80,5 @@ e2.name as colleague
 FROM employees e1
 INNER JOIN employees e2
 ON e1.salary > e2.salary;
+
+SELECT datname FROM pg_database;
