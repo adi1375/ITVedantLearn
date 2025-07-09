@@ -54,5 +54,12 @@ SUM(amount) AS daily_revenue,
 RANK() OVER (ORDER BY SUM(amount) DESC) AS revenue_rank
 FROM orders
 GROUP BY order_date
-ORDER BY revenue_rank
 LIMIT 3;
+
+-- 12
+SELECT
+user_id,
+SUM(amount) AS total_spent,
+RANK() OVER (ORDER BY SUM(amount) DESC) AS relative_rank
+FROM orders
+GROUP BY user_id;
